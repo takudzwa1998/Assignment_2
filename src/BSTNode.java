@@ -46,7 +46,6 @@ public class BSTNode {
             if ( right != null )
 
             {
-		//count++;
                 right.put( key, value1, value2);
 
             }
@@ -68,20 +67,21 @@ public class BSTNode {
     public String get( String key)
 
     {
+	count++;
         if ( this.key.equals( key ) )
         {
-	count++;
+
             return (key+" "+value1+" "+value2);
         }
         if ( key.compareTo( this.key ) < 0 )
         {
-	count++;
+	//count++;
             return left == null ? null : left.get( key );
 	   
         }
         else
         {
-	count++;
+	//count++;
             return right == null ? null : right.get( key );
         }
     }
