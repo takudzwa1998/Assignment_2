@@ -156,7 +156,7 @@
              else
              {
                  found = true;
-		System.out.println(r.data+" "+r.power+" "+r.voltage+" "+count());
+		System.out.println(r.data+" "+r.power+" "+r.voltage);
                  break;
              }
              found = search(r, val);

@@ -13,8 +13,9 @@ import java.io.FileReader;
 import java.io.IOException;
  public class PowerAVLApp{
 	public static AVLTree avlTree = new AVLTree(); 
-	public static void main(String[] args){
-	
+
+	public static void extractData(){
+
 	String line = null;
 	try{
 	
@@ -27,9 +28,25 @@ import java.io.IOException;
 	}
         catch (Exception e){ e.printStackTrace();}
 	}
+
+	public static void printDateTime(String dateTime){
+		extractData();
+		if (avlTree.search(dateTime)!=null){
+		System.out.println(avlTree.search(dateTime));
+		System.out.println(avlTree.count());
+		}
+		else{System.out.println("date and time not found");
+		System.out.println(avlTree.count());}
+	
 	}
 
 
+	public static void main(String[] args){
+
+
+	}
+
+}
 
 
 
