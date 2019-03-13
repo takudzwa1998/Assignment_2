@@ -9,7 +9,7 @@
  /* Class AVLTree */
  class AVLTree{
 
-     private AVLNode root;     
+     public AVLNode root;//was private now public     
      /* Constructor */
      private static int count=0;
      public AVLTree()
@@ -142,7 +142,7 @@
          return search(root, val);
      }
 
-     private boolean search(AVLNode r, String val)
+     private boolean search(AVLNode r, String val)//was boolean, now void
      {
          boolean found = false;
          while ((r != null) && !found)
@@ -156,7 +156,6 @@
              else
              {
                  found = true;
-		System.out.println(r.data+" "+r.power+" "+r.voltage);
                  break;
              }
              found = search(r, val);
