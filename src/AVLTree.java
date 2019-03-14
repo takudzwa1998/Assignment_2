@@ -137,31 +137,33 @@
 
      /* Functions to search for an element */
 
-     public boolean search(String val)
+     public String search(String val)//was boolean, now String
      {
          return search(root, val);
      }
 
-     private boolean search(AVLNode r, String val)//was boolean, now void
+     private String search(AVLNode r, String val)//was boolean, now String
      {
          boolean found = false;
+
          while ((r != null) && !found)
          {
              String rval = r.data;
-             if (val.compareTo(rval)<0){
-				count++;
-                 r = r.left;}
+             if (val.compareTo(rval)<0){ count++; r = r.left;}
              else if (val.compareTo(rval)>0)
                  r = r.right;
              else
              {
                  found = true;
+		//System.out.println(r.data+" yeah yeah "+r.power+" "+r.voltage);
                  break;
              }
-             found = search(r, val);
+             search(r, val); //was /found = search(r, val);
          }
-         return found;
+	if(found==false){return "Date/Time not found";}
+         return r.data+" "+r.power+" "+r.voltage;
      }
+
 
      /* Function to get height of node */
      private int height(AVLNode t )
