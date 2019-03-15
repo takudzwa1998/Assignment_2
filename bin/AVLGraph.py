@@ -39,7 +39,10 @@ plt.title('Graph of Number of Count Operations Against Number of Sampled Data It
 plt.subplot(3,1,1)
 plt.ylabel('No. of Count Operations')
 plt.xlabel('No. of Sampled Data Items')
-plt.plot(bst,Counts_BEST, 'r--'  )
-plt.axis([ 0, 500,0, 10000000])
-
+plt.plot(bst,Counts_BEST, 'g--'  )
+#plt.plot(avg,Counts_AVG, 'b--'  )
+plt.subplot(3,1,2)
+plt.plot(avg,Counts_AVG, 'b--'  )
+plt.subplot(3,1,3)
+plt.plot(worst,Counts_WORST, 'r--'  )
 plt.show()
