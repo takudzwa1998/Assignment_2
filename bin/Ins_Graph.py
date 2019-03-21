@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 Counts_BEST=[]
 bst=[]
 a=0
-file=open("PowerAVLOutputs/min_search_counts.txt", "r")
+file=open("PowerAVLOutputs/min_insertion_counts.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_BEST.append(float_count)
@@ -72,7 +72,7 @@ for line in file.readlines():
 
 plt.title('Graph of Number of Count Operations Against Number of Sampled Data Items for AVLTree')
 plt.subplot(3,1,1)
-plt.plot(bst,Counts_BEST, 'g--'  )
+plt.plot(bst,Counts_BEST, 'b--'  )
 plt.plot(bst_BST,CountsBST_BEST, 'k--'  )
 plt.ylabel('Best Case')
 
@@ -80,9 +80,10 @@ plt.subplot(3,1,2)
 plt.ylabel('No. of Count Operations')
 plt.plot(avg,Counts_AVG, 'b--'  )
 plt.plot(avg_BST,CountsBST_AVG, 'k--'  )
+plt.ylabel('Average Case')
 
 plt.subplot(3,1,3)
-plt.plot(worst,Counts_WORST, 'r--'  )
+plt.plot(worst,Counts_WORST, 'b--'  )
 plt.plot(worst_BST,CountsBST_WORST, 'k--'  )
 plt.xlabel('No. of Sampled Data Items')
 plt.ylabel('Worst Case')
