@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import matplotlib.pyplot as plt
 
-#Min_Insert Graph AVL
+#Min_search Graph AVL
 Counts_BEST=[]
 bst=[]
 a=0
@@ -12,7 +12,7 @@ for line in file.readlines():
 	bst.append(a)
 	a+=1
 
-#Min_Insert Graph BST
+#Min_search Graph BST
 CountsBST_BEST=[]
 bst_BST=[]
 a_BST=0
@@ -24,7 +24,7 @@ for line in file.readlines():
 	a_BST+=1
 
 
-#Average_Insert Graph AVL
+#Average_search Graph AVL
 Counts_AVG=[]
 avg=[]
 b=0
@@ -35,7 +35,7 @@ for line in file.readlines():
 	avg.append(b)
 	b+=1
 
-#Average_Insert Graph BST
+#Average_seacrh Graph BST
 CountsBST_AVG=[]
 avg_BST=[]
 b_BST=0
@@ -46,7 +46,7 @@ for line in file.readlines():
 	avg_BST.append(b_BST)
 	b_BST+=1
 
-#Max_insert Graph AVL
+#Max_search Graph AVL
 Counts_WORST=[]
 worst=[]
 c=0
@@ -58,7 +58,7 @@ for line in file.readlines():
 	c+=1
 
 
-#Max_insert Graph BST
+#Max_search Graph BST
 CountsBST_WORST=[]
 worst_BST=[]
 c_BST=0
